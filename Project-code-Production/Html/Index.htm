@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>Web-Enabled Automated Manufacturing System:Logon</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+function log()
+ {
+   var usr1=document.login.uid.value.length
+   var pwd1=document.login.pwd.value.length
+   var usr=document.login.uid.value
+   var pwd=document.login.pwd.value
+   if(usr.length==0)
+	{
+        alert("Enter username");
+		document.login.uid.focus();
+		return false
+	}
+	else if(pwd.length==0)
+      {
+        alert("Enter password");
+		document.login.pwd.focus();
+		return false
+	  }
+
+  return true
+ }
+
+
+  </SCRIPT>
+</HEAD>
+<BODY>
+<P align=center><FONT color=deepskyblue
+ size=5><STRONG>Web-Enabled Automated Manufacturing System</STRONG></FONT></P>
+<IMG src="/docs/Graphics/vsptitle.jpg" 
+style="HEIGHT: 80px;   WIDTH: 105px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG></FONT> <IMG 
+src="/docs/Graphics/hotsteel.jpg" 
+style="HEIGHT: 189px; WIDTH: 619px">
+<P align=center><STRONG><FONT color=#7b68ee size=5><FONT color=mediumslateblue 
+size=5><STRONG>LOGIN</STRONG></FONT></FONT></STRONG>
+<TABLE border=0 cellPadding=1 cellSpacing=1 width="75%">
+  
+  <TR>
+    <TD>
+      <FORM action=http://peers:8080/servlet/CheckUser method=post name=login 
+      onsubmit="return log()">
+      <P align=left> 
+      </P>
+      <P align=left>UserName <INPUT id=text2 
+      name=uid>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </P>
+      <P align=left>Password&nbsp; <INPUT id=text1 name=pwd type=password><INPUT id=submit1 name=submit1 type=submit value=Submit></P></FORM></TD>
+    <TD></TD></TR></TABLE></P>
+</BODY>
+</HTML>
